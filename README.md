@@ -1,69 +1,54 @@
-# React + TypeScript + Vite
+# Golden State Warriors Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive, interactive dashboard for the Golden State Warriors built with React, TypeScript, and modern web technologies. Features real-time player statistics, team performance analytics, recent game results, and an intuitive player roster with advanced filtering capabilities.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Team Information
+- **Team Overview**: Complete team profile with logo, establishment year, and detailed description
+- **Expandable Content**: Read more/less functionality for team descriptions
+- **Visual Branding**: Official Warriors colors and styling throughout
 
-## Expanding the ESLint configuration
+### 📊 Real-time Statistics
+- **2023-24 Season Stats**: Live data integration with balldontlie.io API
+- **Interactive Charts**: Beautiful bar charts showing team performance metrics
+- **Per-Game Averages**: Points, rebounds, assists, steals, and blocks
+- **Visual Data**: Responsive charts that work on all devices
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 👥 Player Roster
+- **Complete Roster**: All current Warriors players with photos and details
+- **Smart Search**: Real-time player name search with instant filtering
+- **Position Filtering**: Filter by position (PG, SG, SF, PF, C, or view all)
+- **Player Cards**: Hover effects and clean card design
+- **Detailed Modals**: Click any player for comprehensive statistics and biography
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🎮 Recent Games
+- **Game Results**: Latest game outcomes with scores and opponents
+- **Win/Loss Indicators**: Color-coded results for quick identification
+- **Performance Charts**: Visual representation of last 5 games
+- **Game Details**: Date, opponent, and final scores
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 🎨 Modern UI/UX
+- **Responsive Design**: Perfect on desktop, tablet, and mobile
+- **Tailwind CSS**: Custom utility classes for maintainable styling
+- **Smooth Animations**: Hover effects, transitions, and loading states
+- **Professional Layout**: Clean, modern design inspired by NBA aesthetics
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Technologies Used
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Frontend Framework
+- **React 19** - Modern React with hooks and functional components
+- **TypeScript** - Type-safe development with full IDE support
+- **Vite** - Lightning-fast build tool and development server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Styling & UI
+- **Tailwind CSS 4** - Utility-first CSS framework with custom @apply classes
+- **Recharts** - Beautiful, customizable charts for data visualization
+- **Custom CSS Classes** - Semantic, reusable components for clean code
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Data & APIs
+- **TheSportsDB API** - Team information, player profiles, and basic stats
+- **balldontlie.io SDK** - Real-time NBA statistics and performance data
+- **Axios** - HTTP client for API requests
+
+
